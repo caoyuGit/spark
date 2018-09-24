@@ -13,7 +13,7 @@ object WordCount {
     //设置 spark 的配置文件信息,设置appName和Master地址
     val sparkConf = new SparkConf().setAppName("WordConut").setMaster("local[2]")
     //构建 sparkcontext 上下文对象，它是程序的入口,所有计算的源头
-    val sc = new SparkContext(sparkConf)
+    val sc = new SparkContext(sparkConf);
 
     //2 读取文件
     val file: RDD[String] = sc.textFile("A:/files/words.txt")
