@@ -12,9 +12,9 @@ object SparkStreamingPollFlume {
       val sparkConf: SparkConf = new SparkConf().setAppName("SparkStreamingPollFlume").setMaster("local[2]")
       //2、创建sparkContext
       val sc = new SparkContext(sparkConf)
-      sc.setLogLevel("WARN")
+      sc.setLogLevel("WARN");
      //3、创建streamingContext
-      val ssc = new StreamingContext(sc,Seconds(5))
+      val ssc = new StreamingContext(sc,Seconds(5));
       ssc.checkpoint("./flume")
      //4、通过FlumeUtils调用createPollingStream方法获取flume中的数据
      val pollingStream: ReceiverInputDStream[SparkFlumeEvent] = FlumeUtils.createPollingStream(ssc,"node1",8888)
