@@ -1,7 +1,7 @@
 package com.demo.wordCount
 
 /**
-  * wordCount案例单机模式2.1
+  * wordCount案例单机模式2.3
   */
 
 import org.apache.spark.rdd.RDD
